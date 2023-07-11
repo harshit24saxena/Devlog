@@ -1,0 +1,15 @@
+
+<%- include("./partials/header") %>
+
+<h1>HOME</h1>
+<p><%= para %></p>
+
+<% postContent.forEach((e)=>{ %>
+  
+  <h1><%= e.title %></h1>
+  <% let content = e.content %>   
+  <p><%= content.substr(0, 100) +"..." %><a href="/post/<%= e.title %>" >Read more</a></p>
+
+<% }) %>
+
+<%- include("./partials/footer") %>
